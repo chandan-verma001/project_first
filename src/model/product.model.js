@@ -1,23 +1,20 @@
-const superform= (sequelize,DataTypes)=>{
+const product = (sequelize,DataTypes)=>{
     return(
         sequelize.define(
-            "superforms",{
+            "product",{
                 name : {
                     type: DataTypes.STRING
                 },
-                email : {
+                price : {
                     type: DataTypes.STRING
                 },
-                phone : {
+                image : {
                     type: DataTypes.STRING
                 },
-                password : {
-                    type: DataTypes.STRING
-                }
             }
         )
     )
 }
 export{
-    superform
+    product
 }

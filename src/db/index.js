@@ -1,6 +1,7 @@
 import { Sequelize,DataTypes } from "sequelize";
-import { userdata } from "../model/userdata.js";
-import { superform } from "../model/superform.model.js"
+import { practice } from "../model/practice.model.js";
+import { register } from "../model/userdata.js"
+import {product} from "../model/product.model.js"
 
 
 const sequelize = new Sequelize('email', 'root', '@Dmin#2004', {
@@ -18,9 +19,11 @@ const sequelize = new Sequelize('email', 'root', '@Dmin#2004', {
   })()
   
   let db = {}
-  db.userdata=userdata(sequelize,DataTypes)
-  // db.userdata.sync({force:true})
-  db.superform = superform(sequelize,DataTypes)
-  // db.superform.sync({force:true})
+  db.register = register(sequelize,DataTypes)
+  // db.register.sync({force:true})
+  db.practice=practice(sequelize,DataTypes)
+  // db.practice.sync({force:true})
+  db.product=product(sequelize,DataTypes)
+  // db.product.sync({force:true})
 
   export default db

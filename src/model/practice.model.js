@@ -1,10 +1,7 @@
-const register= (sequelize,DataTypes)=>{
+const practice= (sequelize,DataTypes)=>{
     return(
         sequelize.define(
-            "register",{
-                profile : {
-                    type: DataTypes.STRING
-                },
+            "practice",{
                 name : {
                     type: DataTypes.STRING
                 },
@@ -12,9 +9,6 @@ const register= (sequelize,DataTypes)=>{
                     type: DataTypes.STRING
                 },
                 phone : {
-                    type: DataTypes.STRING
-                },
-                gender : {
                     type: DataTypes.STRING
                 },
                 password : {
@@ -25,5 +19,5 @@ const register= (sequelize,DataTypes)=>{
     )
 }
 export{
-    register
+    practice
 }
