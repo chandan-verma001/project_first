@@ -24,8 +24,9 @@ const products = (app) => {
   let routes = express.Router();
   routes.post("/create", upload.single("image"), createdata);
   routes.get("/findall", getalldata);
-
+  
   app.use("/product", routes);
+
 };
 
 export default products;
